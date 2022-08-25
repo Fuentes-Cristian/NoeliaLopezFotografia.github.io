@@ -1,0 +1,22 @@
+/*mixins*/
+
+@mixin flexible ($dis, $just, $align, $nowrap)  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap, wrap;
+    flex-flow: column, row;
+}
+
+@mixin grid ($dis, $columns, $row, $just, $align) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto );
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px){
+        grid-template-columns: repeat(1, auto);
+        column-gap: 1rem;
+        
+    }
+}
